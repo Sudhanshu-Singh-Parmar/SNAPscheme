@@ -35,7 +35,7 @@ const LANGUAGES = [
   { label: 'मराठी (Marathi)', value: 'Marathi',  locale: 'mr-IN' },
 ];
 
-const API_URL = 'http://localhost:3000/api/simplify';
+const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3000/api/simplify';
 
 // ── Utility: strip Markdown syntax for TTS ────────────────────────────────────
 const stripMarkdown = (text) =>

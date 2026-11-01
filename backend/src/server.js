@@ -17,7 +17,7 @@ const PORT = process.env.PORT || 3000;
 // permitted so future session-cookie work doesn't require CORS rework.
 app.use(
   cors({
-    origin: 'http://localhost:5173',
+    origin: process.env.FRONTEND_URL || "http://localhost:5173",
     methods: ['GET', 'POST'],
     allowedHeaders: ['Content-Type', 'Authorization'],
     credentials: true,
